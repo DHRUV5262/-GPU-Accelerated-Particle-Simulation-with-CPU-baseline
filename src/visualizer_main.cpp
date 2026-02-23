@@ -11,6 +11,7 @@
 #include "particle_types.h"
 
 #include <SDL.h>
+#include <cmath>
 #include <cstring>
 #include <iostream>
 #include <SDL_ttf.h>
@@ -27,6 +28,7 @@ constexpr float SIM_BOUND = 5.0f;   // particles in [-SIM_BOUND, SIM_BOUND]
 constexpr float DT = 0.016f;
 constexpr int STEPS_PER_FRAME = 1;
 constexpr unsigned RAND_SEED = 42;
+constexpr int PARTICLE_SIZE = 2;    // pixel size per particle (2 = 2x2 rect); adjust for visibility
 
 enum class Approach {
     CPU,
@@ -48,21 +50,29 @@ const char* approachName(Approach a) {
     }
 }
 
-// Start at center, random directions; spring pulls each back like a thread to center
+// Place particles on/near circle edge with tangential velocities for orbital motion.
+// omega = sqrt(kSpringK) gives circular orbit; random angles and slight radius variation
+// so they touch the window edges and look natural.
 void initParticles(std::vector<float>& x, std::vector<float>& y, std::vector<float>& z,
                   std::vector<float>& vx, std::vector<float>& vy, std::vector<float>& vz) {
     std::mt19937 rng(RAND_SEED);
-    const float centerSpread = 0.2f;  // tiny cloud at center
-    std::uniform_real_distribution<float> pos(-centerSpread, centerSpread);
-    std::uniform_real_distribution<float> vel(-1.2f, 1.2f);  // random outward direction
+    const float omega = 0.707f;  // sqrt(kSpringK) for circular orbit
+    const float radiusBase = 4.5f;  // near SIM_BOUND so particles reach window edges
+    std::uniform_real_distribution<float> angle(0.0f, 6.283185307f);  // 0..2*pi
+    std::uniform_real_distribution<float> radiusVar(-0.5f, 0.5f);     // randomness in radius
+    std::uniform_real_distribution<float> omegaVar(0.7f, 1.3f);       // some orbit faster/slower
     const int n = static_cast<int>(x.size());
     for (int i = 0; i < n; ++i) {
-        x[i] = pos(rng);
-        y[i] = pos(rng);
-        z[i] = pos(rng);
-        vx[i] = vel(rng);
-        vy[i] = vel(rng);
-        vz[i] = vel(rng);
+        float th = angle(rng);
+        float r = radiusBase + radiusVar(rng);
+        float om = omega * omegaVar(rng);
+        x[i] = r * std::cos(th);
+        y[i] = r * std::sin(th);
+        z[i] = 0.0f;
+        // Tangential velocity for orbit: v_perp = omega * r
+        vx[i] = -om * y[i];
+        vy[i] =  om * x[i];
+        vz[i] = 0.0f;
     }
 }
 
@@ -91,7 +101,7 @@ static bool wantBenchmarkMode(int argc, char* argv[]) {
 int run_visualizer(int argc, char* argv[]) {
     // Toggle: if --benchmark / -b, run sim for different N and write CSV (no window)
     if (wantBenchmarkMode(argc, argv)) {
-        std::vector<int> particle_counts = {1'000, 10'000, 50'000, 100'000};
+        std::vector<int> particle_counts = {1'000, 10'000, 50'000, 100'000, 200'000, 300'000, 400'000};
         const int steps = 100;
         const std::string csv_path = "benchmark_results.csv";
         std::cout << "Running benchmarks (N = ";
@@ -232,11 +242,15 @@ int run_visualizer(int argc, char* argv[]) {
         SDL_SetRenderDrawColor(ren, 20, 20, 30, 255);
         SDL_RenderClear(ren);
         SDL_SetRenderDrawColor(ren, 180, 220, 255, 255);
-        std::vector<SDL_Point> points(N);
+        const int half = PARTICLE_SIZE / 2;
         for (int i = 0; i < N; ++i) {
-            worldToScreen(h_x[i], h_y[i], points[i].x, points[i].y);
+            int sx, sy;
+            worldToScreen(h_x[i], h_y[i], sx, sy);
+            SDL_Rect rect = { sx - half, sy - half, PARTICLE_SIZE, PARTICLE_SIZE };
+            if (rect.w < 1) rect.w = 1;
+            if (rect.h < 1) rect.h = 1;
+            SDL_RenderFillRect(ren, &rect);
         }
-        SDL_RenderDrawPoints(ren, points.data(), N);
 
         // FPS text
         uint64_t now = SDL_GetPerformanceCounter();

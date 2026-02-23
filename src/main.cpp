@@ -4,7 +4,7 @@
 #include <vector>
 
 int main() {
-    std::vector<int> particle_counts = {1'000, 10'000, 50'000, 100'000};
+    std::vector<int> particle_counts = {1'000, 10'000, 50'000, 100'000, 200'000, 300'000, 400'000};
     const int steps = 100;
     const std::string csv_path = "benchmark_results.csv";
 
