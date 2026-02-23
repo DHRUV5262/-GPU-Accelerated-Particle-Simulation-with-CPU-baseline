@@ -5,7 +5,7 @@
 
 // Block size 256: balances occupancy and register pressure on most GPUs.
 // Warp size is 32, so 256 = 8 warps per block; good utilization without
-// excessive register spilling. Easy to port to HIP (ROCm) where warp = 64.
+// excessive register spilling. Other GPU APIs may use different warp sizes (e.g. 64 vs 32).
 constexpr int kBlockSize = 256;
 
 __global__ void particle_step_optimized_kernel(
