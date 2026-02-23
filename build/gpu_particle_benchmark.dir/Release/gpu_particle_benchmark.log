@@ -1,6 +1,28 @@
-﻿  benchmark.cpp
-  main.cpp
+﻿  Compiling CUDA source file ..\src\gpu_sim_naive.cu...
+  
+  D:\C++\-GPU-Accelerated-Particle-Simulation-with-CPU-baseline\build>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.1\bin\nvcc.exe"  --use-local-env -ccbin "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64" -x cu -rdc=true  -I"D:\C++\-GPU-Accelerated-Particle-Simulation-with-CPU-baseline\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.1\include"     --keep-dir gpu_part.7D21DE7D\x64\Release  -maxrregcount=0    --machine 64 --compile -cudart static -std=c++17 --generate-code=arch=compute_75,code=[compute_75,sm_75] --generate-code=arch=compute_80,code=[compute_80,sm_80] --generate-code=arch=compute_86,code=[compute_86,sm_86] --generate-code=arch=compute_89,code=[compute_89,sm_89] --generate-code=arch=compute_90,code=[compute_90,sm_90] -Xcompiler="/EHsc -Ob2"   -D_WINDOWS -DNDEBUG -D"CMAKE_INTDIR=\"Release\"" -D_MBCS -DWIN32 -D_WINDOWS -DNDEBUG -D"CMAKE_INTDIR=\"Release\"" -Xcompiler "/EHsc /W1 /nologo /O2 /FS   /MD /GR" -Xcompiler "/Fdgpu_particle_benchmark.dir\Release\vc143.pdb" -o gpu_particle_benchmark.dir\Release\gpu_sim_naive.obj "D:\C++\-GPU-Accelerated-Particle-Simulation-with-CPU-baseline\src\gpu_sim_naive.cu" 
+  gpu_sim_naive.cu
+  tmpxft_00005858_00000000-7_gpu_sim_naive.compute_90.cudafe1.cpp
+  benchmark.cpp
+  cpu_sim.cpp
   Generating Code...
+  
+  D:\C++\-GPU-Accelerated-Particle-Simulation-with-CPU-baseline\build>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.1\bin\nvcc.exe" -dlink  -o gpu_particle_benchmark.dir\Release\gpu_particle_benchmark.device-link.obj -Xcompiler "/EHsc /W1 /nologo /O2   /MD /GR" -Xcompiler "/Fdgpu_particle_benchmark.dir\Release\vc143.pdb" -L"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.1\bin\x64/crt" -L"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.1\lib\x64" -L"C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.1/lib/x64" -L"C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.1/lib/x64/Release" -L"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.1\lib\x64" cudadevrt.lib cudart_static.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib -forward-unknown-to-host-compiler -Wno-deprecated-gpu-targets -D_WINDOWS -Xcompiler=" /GR /EHsc" -Xcompiler="-O2 -Ob2" -DNDEBUG "--generate-code=arch=compute_75,code=[compute_75,sm_75]" "--generate-code=arch=compute_80,code=[compute_80,sm_80]" "--generate-code=arch=compute_86,code=[compute_86,sm_86]" "--generate-code=arch=compute_89,code=[compute_89,sm_89]" "--generate-code=arch=compute_90,code=[compute_90,sm_90]" -Xcompiler=-MD    gpu_particle_benchmark.dir\Release\gpu_sim_naive.obj gpu_particle_benchmark.dir\Release\gpu_sim_optimized.obj gpu_particle_benchmark.dir\Release\gpu_sim_soa_unfused.obj 
+  cudadevrt.lib
+  cudart_static.lib
+  kernel32.lib
+  user32.lib
+  gdi32.lib
+  winspool.lib
+  shell32.lib
+  ole32.lib
+  oleaut32.lib
+  uuid.lib
+  comdlg32.lib
+  advapi32.lib
+  gpu_sim_naive.obj
+  gpu_sim_optimized.obj
+  gpu_sim_soa_unfused.obj
      Creating library D:/C++/-GPU-Accelerated-Particle-Simulation-with-CPU-baseline/build/Release/gpu_particle_benchmark.lib and object D:/C++/-GPU-Accelerated-Particle-Simulation-with-CPU-baseline/build/Release/gpu_particle_benchmark.exp
 LINK : warning LNK4098: defaultlib 'LIBCMT' conflicts with use of other libs; use /NODEFAULTLIB:library
   gpu_particle_benchmark.vcxproj -> D:\C++\-GPU-Accelerated-Particle-Simulation-with-CPU-baseline\build\Release\gpu_particle_benchmark.exe

@@ -63,7 +63,7 @@ set(CMAKE_CUDA_COMPILER_LIBRARY_ROOT "C:/Program Files/NVIDIA GPU Computing Tool
 
 set(CMAKE_CUDA_ARCHITECTURES_ALL "75-real;80-real;86-real;87-real;88-real;89-real;90-real;100-real;103-real;110-real;120-real;121")
 set(CMAKE_CUDA_ARCHITECTURES_ALL_MAJOR "75-real;80-real;90-real;100-real;110-real;120")
-set(CMAKE_CUDA_ARCHITECTURES_NATIVE "No CUDA devices found.-real")
+set(CMAKE_CUDA_ARCHITECTURES_NATIVE "75-real")
 
 set(CMAKE_CUDA_TOOLKIT_INCLUDE_DIRECTORIES "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.1/include;C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.1/include/cccl")
 

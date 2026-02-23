@@ -34,6 +34,24 @@ python scripts/plot_results.py
 
 The plot is saved as `benchmark_plot.png`.
 
+## Visualizer (optional)
+
+A 2D real-time visualizer shows particle positions (x,y) and **FPS** so you can compare performance of each approach live.
+
+**Requirements:** SDL2 and SDL2_ttf (e.g. `vcpkg install sdl2 sdl2-ttf`, or system packages on Linux).
+
+If found at configure time, the `gpu_particle_visualizer` target is built. Run it from the build directory:
+
+```bash
+./gpu_particle_visualizer   # or .\Release\gpu_particle_visualizer.exe on Windows
+```
+
+- **FPS** and current **Method** are shown in the top-left.
+- **Keys 1–5** switch approach: `1` CPU, `2` GPU Naive, `3` GPU SoA Fused (256), `4` GPU SoA Unfused, `5` GPU SoA Fused (512).
+- **Escape** quits.
+
+Particle count is fixed at 50,000 in the visualizer. Compare FPS when switching methods to see the impact of each optimization.
+
 ## Naive vs optimized kernels
 
 | Variant | Layout | Kernels | Block size |
@@ -70,6 +88,7 @@ src/
   gpu_sim_soa_unfused.cu
   benchmark.cpp
   main.cpp
+  visualizer_main.cpp   # optional (SDL2 + SDL2_ttf)
 scripts/
   plot_results.py
 README.md

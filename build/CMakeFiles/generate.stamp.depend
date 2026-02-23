@@ -2,6 +2,8 @@
 C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeCUDAInformation.cmake
 C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeCXXInformation.cmake
 C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeCommonLanguageInclude.cmake
+C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeDependentOption.cmake
+C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeFindDependencyMacro.cmake
 C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeGenericSystem.cmake
 C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeInitializeConfigs.cmake
 C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeLanguageInformation.cmake
@@ -13,12 +15,34 @@ C:/Program Files/CMake/share/cmake-4.2/Modules/Compiler/MSVC-CXX.cmake
 C:/Program Files/CMake/share/cmake-4.2/Modules/Compiler/MSVC.cmake
 C:/Program Files/CMake/share/cmake-4.2/Modules/Compiler/NVIDIA-CUDA.cmake
 C:/Program Files/CMake/share/cmake-4.2/Modules/Compiler/NVIDIA.cmake
+C:/Program Files/CMake/share/cmake-4.2/Modules/FeatureSummary.cmake
+C:/Program Files/CMake/share/cmake-4.2/Modules/Internal/CMakeCXXLinkerInformation.cmake
+C:/Program Files/CMake/share/cmake-4.2/Modules/Internal/CMakeCommonLinkerInformation.cmake
+C:/Program Files/CMake/share/cmake-4.2/Modules/Linker/MSVC-CXX.cmake
+C:/Program Files/CMake/share/cmake-4.2/Modules/Linker/MSVC.cmake
+C:/Program Files/CMake/share/cmake-4.2/Modules/Platform/Linker/Windows-MSVC-CXX.cmake
+C:/Program Files/CMake/share/cmake-4.2/Modules/Platform/Linker/Windows-MSVC.cmake
 C:/Program Files/CMake/share/cmake-4.2/Modules/Platform/Windows-Initialize.cmake
 C:/Program Files/CMake/share/cmake-4.2/Modules/Platform/Windows-MSVC-CXX.cmake
 C:/Program Files/CMake/share/cmake-4.2/Modules/Platform/Windows-MSVC.cmake
 C:/Program Files/CMake/share/cmake-4.2/Modules/Platform/Windows-NVIDIA-CUDA.cmake
 C:/Program Files/CMake/share/cmake-4.2/Modules/Platform/Windows.cmake
 C:/Program Files/CMake/share/cmake-4.2/Modules/Platform/WindowsPaths.cmake
+C:/Users/LENOVO/vcpkg/installed/x64-windows/share/SDL2_ttf/SDL2_ttf-shared-targets-debug.cmake
+C:/Users/LENOVO/vcpkg/installed/x64-windows/share/SDL2_ttf/SDL2_ttf-shared-targets-release.cmake
+C:/Users/LENOVO/vcpkg/installed/x64-windows/share/SDL2_ttf/SDL2_ttf-shared-targets.cmake
+C:/Users/LENOVO/vcpkg/installed/x64-windows/share/SDL2_ttf/SDL2_ttfConfig.cmake
+C:/Users/LENOVO/vcpkg/installed/x64-windows/share/SDL2_ttf/SDL2_ttfConfigVersion.cmake
+C:/Users/LENOVO/vcpkg/installed/x64-windows/share/sdl2/SDL2Config.cmake
+C:/Users/LENOVO/vcpkg/installed/x64-windows/share/sdl2/SDL2ConfigVersion.cmake
+C:/Users/LENOVO/vcpkg/installed/x64-windows/share/sdl2/SDL2Targets-debug.cmake
+C:/Users/LENOVO/vcpkg/installed/x64-windows/share/sdl2/SDL2Targets-release.cmake
+C:/Users/LENOVO/vcpkg/installed/x64-windows/share/sdl2/SDL2Targets.cmake
+C:/Users/LENOVO/vcpkg/installed/x64-windows/share/sdl2/SDL2mainTargets-debug.cmake
+C:/Users/LENOVO/vcpkg/installed/x64-windows/share/sdl2/SDL2mainTargets-release.cmake
+C:/Users/LENOVO/vcpkg/installed/x64-windows/share/sdl2/SDL2mainTargets.cmake
+C:/Users/LENOVO/vcpkg/installed/x64-windows/share/sdl2/sdlfind.cmake
+C:/Users/LENOVO/vcpkg/scripts/buildsystems/vcpkg.cmake
 D:/C++/-GPU-Accelerated-Particle-Simulation-with-CPU-baseline/CMakeLists.txt
 D:/C++/-GPU-Accelerated-Particle-Simulation-with-CPU-baseline/build/CMakeFiles/4.2.3/CMakeCUDACompiler.cmake
 D:/C++/-GPU-Accelerated-Particle-Simulation-with-CPU-baseline/build/CMakeFiles/4.2.3/CMakeCXXCompiler.cmake

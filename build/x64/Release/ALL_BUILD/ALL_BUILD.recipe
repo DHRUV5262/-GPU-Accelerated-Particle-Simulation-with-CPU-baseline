@@ -8,6 +8,9 @@
       <FullPath>D:\C++\-GPU-Accelerated-Particle-Simulation-with-CPU-baseline\build\Release\gpu_particle_benchmark.exe</FullPath>
     </ProjectOutput>
     <ProjectOutput>
+      <FullPath>D:\C++\-GPU-Accelerated-Particle-Simulation-with-CPU-baseline\build\Release\gpu_particle_visualizer.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
       <FullPath>D:\C++\-GPU-Accelerated-Particle-Simulation-with-CPU-baseline\build\x64\Release\ALL_BUILD</FullPath>
     </ProjectOutput>
   </ProjectOutputs>

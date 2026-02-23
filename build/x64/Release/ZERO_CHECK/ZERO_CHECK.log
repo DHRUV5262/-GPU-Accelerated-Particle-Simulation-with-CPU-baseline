@@ -1,0 +1,10 @@
+﻿  1>Checking Build System
+  CMake is re-running because D:/C++/-GPU-Accelerated-Particle-Simulation-with-CPU-baseline/build/CMakeFiles/generate.stamp is out-of-date.
+    the file 'D:/C++/-GPU-Accelerated-Particle-Simulation-with-CPU-baseline/CMakeLists.txt'
+    is newer than 'D:/C++/-GPU-Accelerated-Particle-Simulation-with-CPU-baseline/build/CMakeFiles/generate.stamp.depend'
+    result='-1'
+  -- Selecting Windows SDK version 10.0.26100.0 to target Windows 10.0.26200.
+  -- Visualizer enabled (SDL2 + SDL2_ttf found)
+  -- Configuring done (0.4s)
+  -- Generating done (0.3s)
+  -- Build files have been written to: D:/C++/-GPU-Accelerated-Particle-Simulation-with-CPU-baseline/build
