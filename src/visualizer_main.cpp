@@ -176,7 +176,7 @@ int run_visualizer(int argc, char* argv[]) {
     };
     syncHostToDevice();
 
-    Approach current = Approach::GPU_SOA_FUSED;
+    Approach current = Approach::CPU;
     uint64_t freq = SDL_GetPerformanceFrequency();
     uint64_t lastTime = SDL_GetPerformanceCounter();
     float fps = 0.0f;
